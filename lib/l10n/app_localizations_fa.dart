@@ -15,5 +15,5 @@ class AppLocalizationsFa extends AppLocalizations {
   String get welcome => 'بەخێربێیت';
 
   @override
-  String get hell => 'سڵاو';
+  String get hello => 'سڵاو';
 }

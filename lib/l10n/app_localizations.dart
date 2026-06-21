@@ -112,11 +112,11 @@ abstract class AppLocalizations {
   /// **'Welcome'**
   String get welcome;
 
-  /// No description provided for @hell.
+  /// No description provided for @hello.
   ///
   /// In en, this message translates to:
   /// **'Hello'**
-  String get hell;
+  String get hello;
 }
 
 class _AppLocalizationsDelegate

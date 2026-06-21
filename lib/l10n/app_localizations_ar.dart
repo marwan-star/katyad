@@ -15,5 +15,5 @@ class AppLocalizationsAr extends AppLocalizations {
   String get welcome => 'اهلا و سهلا';
 
   @override
-  String get hell => 'مرحبا';
+  String get hello => 'مرحبا';
 }
