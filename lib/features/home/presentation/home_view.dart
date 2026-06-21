@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reminder_app/l10n/app_localizations.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -12,10 +13,15 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Column(children: [const Text('سڵاو'), const Text('مەڕوان')]),
+        title: Column(
+          children: [
+            Text(AppLocalizations.of(context)!.hell),
+            const Text('مەڕوان'),
+          ],
+        ),
       ),
 
-      body: Text('بەخێربێی!'),
+      body: Text(AppLocalizations.of(context)!.welcome),
     );
   }
 }
