@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:reminder_app/core/constants/icon_urls.dart';
 import 'package:reminder_app/core/extensions/global_extensions.dart';
@@ -14,11 +15,12 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        toolbarHeight: 75, // increase as needed
-
+        backgroundColor: Colors.white,
+        toolbarHeight: 75,
         title: Column(
-          crossAxisAlignment: .start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(context.t.welcome),
             Text(
@@ -27,18 +29,45 @@ class _HomeViewState extends State<HomeView> {
             ),
           ],
         ),
-
         actions: [
           CustomSvgIcon(
             icon: IconUrls.notification,
-            onTap: () {
-              print("pressed");
-            },
+            onTap: () => print("pressed"),
           ),
         ],
       ),
+      body: Stack(
+        alignment: Alignment.bottomCenter,
 
-      body: Placeholder(),
+        children: [
+          // Content fills full body
+
+          // Floating nav bar on top
+          Positioned(
+            bottom: 18,
+            left: 18,
+            right: 18,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(50),
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    CustomSvgIcon(icon: IconUrls.home, onTap: () {}),
+                    CircleAvatar(
+                      radius: 32,
+                      backgroundColor: Colors.amber[100],
+                      child: CustomSvgIcon(icon: IconUrls.add, onTap: () {}),
+                    ),
+                    CustomSvgIcon(icon: IconUrls.calendar, onTap: () {}),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
