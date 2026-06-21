@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:reminder_app/features/home/presentation/home_view.dart';
+import 'package:reminder_app/features/home/presentation/views/home_view.dart';
 import 'package:reminder_app/l10n/app_localizations.dart';
 
 class App extends StatefulWidget {
@@ -29,9 +29,6 @@ class _AppState extends State<App> {
         Locale('fa'), // Kurdish
       ],
       locale: Locale('fa'),
-      builder: (context, child) {
-        return Directionality(textDirection: TextDirection.rtl, child: child!);
-      },
 
       home: HomeView(),
     );
