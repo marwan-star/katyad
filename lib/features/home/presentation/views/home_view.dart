@@ -15,6 +15,21 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Container(
+        padding: const EdgeInsets.all(20),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            CustomSvgIcon(icon: IconUrls.home, onTap: () {}),
+            CircleAvatar(
+              radius: 32,
+              backgroundColor: Colors.amber[100],
+              child: CustomSvgIcon(icon: IconUrls.add, onTap: () {}),
+            ),
+            CustomSvgIcon(icon: IconUrls.calendar, onTap: () {}),
+          ],
+        ),
+      ),
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -36,36 +51,10 @@ class _HomeViewState extends State<HomeView> {
           ),
         ],
       ),
-      body: Stack(
-        alignment: Alignment.bottomCenter,
+      body: Stack(alignment: Alignment.bottomCenter, children: [
+        
 
-        children: [
-          // Content fills full body
-
-          // Floating nav bar on top
-          Positioned(
-            bottom: 18,
-            left: 18,
-            right: 18,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(50),
-              child: Container(
-                padding: const EdgeInsets.all(20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    CustomSvgIcon(icon: IconUrls.home, onTap: () {}),
-                    CircleAvatar(
-                      radius: 32,
-                      backgroundColor: Colors.amber[100],
-                      child: CustomSvgIcon(icon: IconUrls.add, onTap: () {}),
-                    ),
-                    CustomSvgIcon(icon: IconUrls.calendar, onTap: () {}),
-                  ],
-                ),
-              ),
-            ),
-          ),
+         
         ],
       ),
     );

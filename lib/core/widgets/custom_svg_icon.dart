@@ -12,7 +12,12 @@ class CustomSvgIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: SvgPicture.asset(icon, width: width, height: height),
+      child: SvgPicture.asset(
+        icon,
+        width: width,
+        height: height,
+        colorFilter: ColorFilter.mode(Colors.black, BlendMode.srcIn),
+      ),
     );
   }
 }
