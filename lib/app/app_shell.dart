@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:reminder_app/core/constants/icon_urls.dart';
 import 'package:reminder_app/core/extensions/global_extensions.dart';
 import 'package:reminder_app/core/widgets/custom_svg_icon.dart';
-import 'package:reminder_app/features/add_reminder/presentation/add_reminder_view.dart';
-import 'package:reminder_app/features/calendar/presentation/calendar_view.dart';
+import 'package:reminder_app/features/add_reminder/presentation/views/add_reminder_view.dart';
+import 'package:reminder_app/features/calendar/presentation/views/calendar_view.dart';
 import 'package:reminder_app/features/home/presentation/views/home_view.dart';
 
 class AppShell extends StatefulWidget {
