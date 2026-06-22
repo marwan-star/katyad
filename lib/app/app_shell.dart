@@ -45,10 +45,7 @@ class _AppShellState extends State<AppShell> {
         alignment: Alignment.bottomCenter,
 
         children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 100),
-            child: pages[currentIndex],
-          ),
+          SizedBox.expand(child: pages[currentIndex]),
 
           // Floating nav bar on top
           Positioned(
@@ -70,7 +67,7 @@ class _AppShellState extends State<AppShell> {
                       onTap: () => setState(() => currentIndex = 1),
                       child: CircleAvatar(
                         radius: 32,
-                        backgroundColor: AppColors.darkOrange,
+                        backgroundColor: AppColors.purple,
                         child: CustomSvgIcon(
                           icon: IconUrls.add,
                           color: AppColors.lightWhite,
