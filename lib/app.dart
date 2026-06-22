@@ -28,7 +28,7 @@ class _AppState extends State<App> {
         Locale('ar'), // Arabic,
         Locale('fa'), // Kurdish
       ],
-      locale: Locale('ar'),
+      locale: Locale('en'),
 
       home: AppShell(),
     );
