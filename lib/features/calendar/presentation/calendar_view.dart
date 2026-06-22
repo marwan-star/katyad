@@ -4,16 +4,16 @@ import 'package:reminder_app/core/constants/icon_urls.dart';
 import 'package:reminder_app/core/extensions/global_extensions.dart';
 import 'package:reminder_app/core/widgets/custom_svg_icon.dart';
 
-class HomeView extends StatefulWidget {
-  const HomeView({super.key});
+class CalendarView extends StatefulWidget {
+  const CalendarView({super.key});
 
   @override
-  State<HomeView> createState() => _HomeViewState();
+  State<CalendarView> createState() => _CalendarViewState();
 }
 
-class _HomeViewState extends State<HomeView> {
+class _CalendarViewState extends State<CalendarView> {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text("Home"));
+    return Center(child: Text("calendar"));
   }
 }
