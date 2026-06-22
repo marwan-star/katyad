@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:reminder_app/core/theme/app_colors.dart';
 
 class CustomSvgIcon extends StatelessWidget {
   final String icon;
-  final double width = 30;
-  final double height = 30;
+  final double width;
+  final double height;
   final void Function() onTap;
-  const CustomSvgIcon({super.key, required this.icon, required this.onTap});
+  final Color color;
+  const CustomSvgIcon({
+    super.key,
+    required this.icon,
+    required this.onTap,
+    this.width = 30,
+    this.height = 30,
+    this.color = AppColors.black,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +25,7 @@ class CustomSvgIcon extends StatelessWidget {
         icon,
         width: width,
         height: height,
-        colorFilter: ColorFilter.mode(Colors.black, BlendMode.srcIn),
+        colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
       ),
     );
   }

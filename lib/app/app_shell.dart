@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:reminder_app/core/constants/icon_urls.dart';
 import 'package:reminder_app/core/extensions/global_extensions.dart';
+import 'package:reminder_app/core/theme/app_colors.dart';
 import 'package:reminder_app/core/widgets/custom_svg_icon.dart';
 import 'package:reminder_app/features/add_reminder/presentation/views/add_reminder_view.dart';
 import 'package:reminder_app/features/calendar/presentation/views/calendar_view.dart';
@@ -21,9 +22,7 @@ class _AppShellState extends State<AppShell> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
         toolbarHeight: 75,
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -67,12 +66,16 @@ class _AppShellState extends State<AppShell> {
                       icon: IconUrls.home,
                       onTap: () => setState(() => currentIndex = 0),
                     ),
-                    CircleAvatar(
-                      radius: 32,
-                      backgroundColor: Colors.amber[100],
-                      child: CustomSvgIcon(
-                        icon: IconUrls.add,
-                        onTap: () => setState(() => currentIndex = 1),
+                    GestureDetector(
+                      onTap: () => setState(() => currentIndex = 1),
+                      child: CircleAvatar(
+                        radius: 32,
+                        backgroundColor: AppColors.darkOrange,
+                        child: CustomSvgIcon(
+                          icon: IconUrls.add,
+                          color: AppColors.lightWhite,
+                          onTap: () => setState(() => currentIndex = 1),
+                        ),
                       ),
                     ),
                     CustomSvgIcon(

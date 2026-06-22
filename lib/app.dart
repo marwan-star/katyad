@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:reminder_app/app/app_shell.dart';
+import 'package:reminder_app/core/theme/app_theme.dart';
 import 'package:reminder_app/l10n/app_localizations.dart';
 
 class App extends StatefulWidget {
@@ -15,8 +16,7 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Reminder App',
-      theme: ThemeData(fontFamily: "NRT"),
-
+      theme: AppTheme.lightTheme,
       localizationsDelegates: [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -25,10 +25,10 @@ class _AppState extends State<App> {
       ],
       supportedLocales: [
         Locale('en'), // English
-        Locale('ar'), // Arabic
+        Locale('ar'), // Arabic,
         Locale('fa'), // Kurdish
       ],
-      locale: Locale('fa'),
+      locale: Locale('ar'),
 
       home: AppShell(),
     );
